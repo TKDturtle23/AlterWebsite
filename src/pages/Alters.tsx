@@ -97,7 +97,7 @@ const ALTERS: AlterProps[] = [
         color: "#b2b2b2",
         details: [
             { title: "Details", value: ["Introverted", "talks less than Riven"] },
-            { title: "Stress", value: ["unknown / not seen recently"] },
+            { title: "Stress", value: ["haven't experienced it yet :/"] },
             { title: "Tells", value: ["quiet", "doesn't react to teasing"] },
             { title: "Good At", value: ["reading", "homework"] }
         ]
