@@ -1,0 +1,73 @@
+.mainRoot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.Header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* GRID CONTAINER */
+.InformationGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* CARD */
+.Information_Content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background-color: #9151e6;
+    border-radius: 12px;
+
+    padding: 20px;
+
+    color: #000000;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.Information_Content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+}
+
+.Information_Content h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.Information_Content p,
+.Information_Content ul {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.Information_Content ul {
+    padding-left: 18px;
+}
+
+.Information_Content li {
+    margin-bottom: 6px;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+    .Content {
+        width: 90%;
+        font-size: 20px;
+    }
+}

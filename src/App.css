@@ -1,0 +1,63 @@
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+}
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.TopBar {
+
+    width: 100%;
+    min-height: 80px;
+
+
+    background-color: #a026e8;
+
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 3%;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.topButtons:hover {
+    background-color: #a97de0;
+}
+
+.topButtons {
+    width: 140px;
+    height: 50px;
+
+    font-size: 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: #c89bff;
+    transition: background-color 0.2s;
+
+
+}
+
+.content {
+    flex: 1;
+    padding: 20px 20px 0px;
+    display: flex;
+}
+
+.Inner {
+    flex: 1;
+    padding: 5% 7% 0 7%;
+    background-color: #a97de0;
+    border-radius: 12px;
+}

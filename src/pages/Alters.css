@@ -1,0 +1,132 @@
+
+.Alters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.CollapsingBar {
+    color: #232323;
+
+    min-height: 80px;
+    background-color: #bfbfbf;
+
+
+    border-radius: 10px 10px 0px 10px;
+
+    display: flex;
+    align-items: center;
+
+
+    gap: 20px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-wrap: wrap;
+}
+.CollapsingBar:hover {
+    cursor: pointer;
+    background-color: #a8a8a8;
+}
+.CollapsingBar:active {
+    background-color: #9a9a9a;
+}
+
+.CollapsingBar,
+.LeftColorBar {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 20px;
+}
+.LeftColorBar {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    flex-wrap: wrap;
+
+    border-bottom-right-radius: 12px;
+    background-color: #e4e4e4;
+    padding: 10px 20px; /* reduce vertical padding */
+
+
+}
+
+.ContentWrapper.open .LeftColorBar {
+    transform: translateY(0);
+}
+
+.ContentWrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 1.0s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+}
+
+.ContentWrapper.open {
+    grid-template-rows: 1fr;
+}
+
+.ContentWrapper > div {
+    overflow: hidden;
+}
+
+.Details {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-bottom: 1%;
+
+}
+
+.Details b {
+    font-size: 22px;
+}
+.DetailRow {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.DetailValue {
+    margin: 0;
+    padding-left: 14px;
+}
+
+.DetailValue {
+    line-height: 1.15;
+    margin: 0 0 0 2%;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.Header {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+.Content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #9151e6;
+
+    border-radius: 12px;
+    min-height: 100px;
+    color: #000000;
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
