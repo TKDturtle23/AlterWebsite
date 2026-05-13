@@ -1,5 +1,4 @@
 import "./Information.css"
-import {useState} from "react";
 
 function Information() {
     return (
