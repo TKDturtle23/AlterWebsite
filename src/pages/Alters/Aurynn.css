@@ -17,6 +17,10 @@
     height: 90%;
 
     border-radius: 30px;
+
+
+    box-sizing: border-box;
+
 }
 
 .AurynnTitle {
@@ -31,4 +35,57 @@
 
     margin: 1%;
     border-radius: 30px;
+}
+.AurynnGrid {
+    position: absolute;
+    inset: 0;              /* top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* or 'contain' depending on desired look */
+    z-index: 0;
+    pointer-events: none; /* prevents blocking clicks */
+    opacity: 0.5;
+}
+
+.AurynnBackground,
+.AurynnTitle {
+    position: relative;
+    z-index: 1;
+}
+.fp-arm {
+    z-index: 10;
+}
+.AurynnTitleBar {
+    width: 100%;
+    height: 5%;
+
+    background: #d8289d;
+    margin: 1%;
+    border-radius: 30px;
+}
+
+.AurynnGrids {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+    gap: clamp(12px, 2vw, 20px);
+    width: 100%;
+    box-sizing: border-box;
+}
+.AurynnGridEntry {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background-color: #9151e6;
+    border-radius: 12px;
+
+    padding: clamp(14px, 2vw, 20px);
+
+    color: #000000;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    min-width: 0; /* prevents overflow in grid */
+
 }
