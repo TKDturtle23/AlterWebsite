@@ -1,7 +1,7 @@
 import "./Alters.css"
 import { useEffect, useRef, useState } from "react";
 import {RivenPage} from "./Alters/Riven.tsx";
-
+import AurynnPage from "./Alters/Aurynn.tsx"
 const alters = [
     {
         name: "Riven",
@@ -28,6 +28,7 @@ const alters = [
         name: "Aurynn",
         color: "#ff42e5",
         path: "/Aurynn",
+        page: <AurynnPage />,
     },
     {
         name: "Corin",

@@ -1,0 +1,42 @@
+.Rivenpage {
+    background-color: #fba9ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.RivenBackground {
+    background-color: #9151e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    border-radius: 12px;
+}
+.Riven_Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 10%;
+    background-color: #42325e;
+
+    border-radius: 12px;
+    margin: 1%;
+}
+.Riven_Header h1 {
+    color: #beafda;
+}
+.Riven_Header .Riven_Circle {
+    display: flex;
+    width: 10px;
+    height: 10px;
+    fill: #beafda;
+    background-color: #beafda;
+    border-radius: 50%;
+}
