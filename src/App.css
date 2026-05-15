@@ -1,8 +1,10 @@
 html,
 body,
 #root {
+    height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 .App {
     min-height: 100vh;
@@ -15,38 +17,61 @@ body,
     width: 100%;
     min-height: 80px;
 
-
     background-color: #a026e8;
-
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 
-    padding-left: 3%;
-    gap: 20px;
+    padding: 0 3%;
+    gap: 16px;
 
     flex-wrap: wrap;
+    box-sizing: border-box;
+
+    position: sticky;
+    top: 0;
+    z-index: 1002;
 }
 
-.topButtons:hover {
+.topButton {
+    flex-shrink: 1;
+    flex-grow: 0;
+
+    min-width: 80px;
+    max-width: 200px;
+    padding: 0 16px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    border-radius: 12px;
+    background-color: #c89bff;
+    color: #1e1e1e;
+
+    text-decoration: none;
+
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.topButton:hover {
     background-color: #a97de0;
 }
 
-.topButtons {
-    width: 140px;
-    height: 50px;
+.topButton:active {
+    transform: scale(0.97);
+}
 
-    font-size: 20px;
-
-    border: none;
-    border-radius: 12px;
-
-    background-color: #c89bff;
-    transition: background-color 0.2s;
-
-
+.topButton:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
 }
 
 .content {
@@ -55,9 +80,3 @@ body,
     display: flex;
 }
 
-.Inner {
-    flex: 1;
-    padding: 5% 7% 0 7%;
-    background-color: #a97de0;
-    border-radius: 12px;
-}

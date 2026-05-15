@@ -2,9 +2,10 @@ import "./Information.css"
 
 function Information() {
     return (
+        <div className={"Inner"}>
         <div className={"mainRoot"}>
             <div className={"Header"}>
-                <div className={"Content"}>
+                <div className={"Header_Content"}>
                     <h1>Information</h1>
                 </div>
             </div>
@@ -59,6 +60,7 @@ function Information() {
                     </p>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

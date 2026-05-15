@@ -11,22 +11,21 @@ function App() {
   return (
       <div className="App">
         <div className={'TopBar'}>
-            <Link to="/information">
-                <button className="topButtons">Information</button>
-            </Link>
+            <Link to="/information" className="topButton">Information</Link>
+            <Link to="/alters" className="topButton">Alters</Link>
+            <Routes>
+                <Route path="/alters" element={<h1>Alters</h1>} />
+            </Routes>
 
-            <Link to="/alters">
-                <button className="topButtons">Alters</button>
-            </Link>
         </div>
           <div className={"content"}>
-              <div className={"Inner"}>
+
                   <Routes>
                       <Route path="/" element={<Information />} />
                       <Route path="/information" element={<Information />} />
                       <Route path="/alters" element={<Alters />} />
                   </Routes>
-              </div>
+
 
           </div>
       </div>

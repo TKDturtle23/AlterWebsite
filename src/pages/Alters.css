@@ -1,132 +1,101 @@
 
+.Alter_Content {
+    display: flex;
+    background-color: #9151e6;
+    border-radius: 12px;
+    padding-bottom: clamp(14px, 2vw, 20px);
+    padding-top: clamp(14px, 2vw, 20px);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 .Alters {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
 }
-.CollapsingBar {
-    color: #232323;
-
-    min-height: 80px;
-    background-color: #bfbfbf;
-
-
-    border-radius: 10px 10px 0px 10px;
-
-    display: flex;
-    align-items: center;
-
-
-    gap: 20px;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    flex-wrap: wrap;
-}
-.CollapsingBar:hover {
-    cursor: pointer;
-    background-color: #a8a8a8;
-}
-.CollapsingBar:active {
-    background-color: #9a9a9a;
+body {
+    background: #111;
+    overflow: hidden;
 }
 
-.CollapsingBar,
-.LeftColorBar {
-    box-sizing: border-box;
+.wheelContainer {
+    position: fixed;
+    z-index: 1001;
+    top: -250px;
+    left: -250px;
+
+    width: 500px;
+    height: 500px;
+}
+
+.wheel {
     width: 100%;
-    padding-left: 20px;
+    height: 100%;
+
+    border-radius: 50%;
+
+    cursor: grab;
+
+    transition:
+            box-shadow 0.3s ease;
 }
-.LeftColorBar {
+
+.alterLabel {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 120px;
+    height: 40px;
+
+    margin-left: -60px;
+    margin-top: -20px;
 
     display: flex;
-    flex-direction: column;
-
-    gap: 20px;
-    flex-wrap: wrap;
-
-    border-bottom-right-radius: 12px;
-    background-color: #e4e4e4;
-    padding: 10px 20px; /* reduce vertical padding */
-
-
-}
-
-.ContentWrapper.open .LeftColorBar {
-    transform: translateY(0);
-}
-
-.ContentWrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 1.0s cubic-bezier(0.22, 1, 0.36, 1);
-    overflow: hidden;
-}
-
-.ContentWrapper.open {
-    grid-template-rows: 1fr;
-}
-
-.ContentWrapper > div {
-    overflow: hidden;
-}
-
-.Details {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    padding-bottom: 1%;
-
-}
-
-.Details b {
-    font-size: 22px;
-}
-.DetailRow {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-}
-
-.DetailValue {
-    margin: 0;
-    padding-left: 14px;
-}
-
-.DetailValue {
-    line-height: 1.15;
-    margin: 0 0 0 2%;
-}
-
-h1 {
-    margin: 0;
-}
-
-p {
-    margin: 0;
-}
-
-.Header {
-    display: flex;
-    flex-direction: column;
-
     align-items: center;
     justify-content: center;
+
+    pointer-events: none;
 }
-.Content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    background-color: #9151e6;
 
-    border-radius: 12px;
-    min-height: 100px;
-    color: #000000;
-    font-size: 30px;
-    margin-bottom: 10px;
+.alterLabel span {
+    color: black;
 
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    font-family: sans-serif;
+
+    white-space: nowrap;
+
+    text-shadow:
+            0 0 8px rgba(255,255,255,0.6);
+}
+
+.pageStack {
+    position: fixed;
+
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.alterPage {
+    width: 100%;
+    height: 100%;
+    inset: 0;
+
+    transition:
+            opacity 0.08s linear;
+
+    will-change: opacity;
+    pointer-events: none;
 }
