@@ -8,7 +8,7 @@
     height: 100%;
 }
 .RivenBackground {
-    background-color: #9151e6;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -17,11 +17,16 @@
     height: 90%;
     border-radius: 12px;
     z-index: 1;
-
+    backdrop-filter: blur(1px);
+    background: radial-gradient(
+            circle at center,
+            rgba(120, 80, 255, 0.15),
+            rgba(0, 0, 0, 0.6)
+    );
 }
 .Riven_Header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 20%;
@@ -33,6 +38,12 @@
 }
 .Riven_Header h1 {
     color: #beafda;
+    margin: 0;
+    margin-top: 1%;
+}
+.Riven_Header p {
+    margin: 0;
+    color: #beafda;
 }
 .Riven_Header .Riven_Circle {
     display: flex;
@@ -41,4 +52,58 @@
     fill: #beafda;
     background-color: #beafda;
     border-radius: 50%;
+}
+.RivenHeader_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Riven_Grid {
+    column-count: auto;
+    column-width: 240px;
+    column-gap: clamp(12px, 2vw, 20px);
+    width: 100%;
+    box-sizing: border-box;
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+.Riven_Grid_entry {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 clamp(12px, 2vw, 20px);
+    break-inside: avoid;
+
+    background-color: #42325e;
+    border-radius: 12px;
+
+    /* animation setup */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: waterfallIn 500ms ease forwards;
+    will-change: transform, opacity;
+
+    color: #beafda;
+}
+
+/* smooth entry animation */
+@keyframes waterfallIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* optional hover polish */
+.Riven_Grid_entry {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.Riven_Grid_entry:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }

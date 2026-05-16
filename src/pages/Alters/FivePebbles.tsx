@@ -71,7 +71,7 @@ export function FivePebblesArm() {
         const cableCount = 6;
 
         cablesRef.current = Array.from({ length: cableCount }, (_, i) => {
-            const segments = 40 + Math.floor((Math.random() - 0.5) * 12);
+            const segments = 40 + Math.floor((Math.random() - 0.5) * 14);
             const segmentLen = 6;
 
             const particles: Particle[] = Array.from({ length: segments }, (_, j) => ({

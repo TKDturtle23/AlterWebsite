@@ -1,12 +1,6 @@
 import "./Riven.css"
 import { useEffect, useRef } from "react";
 
-type Boid = {
-    x: number;
-    y: number;
-    vx: number;
-    vy: number;
-};
 
 
 
@@ -205,19 +199,83 @@ export function BoidsBackground() {
     );
 }
 export function RivenPage() {
-    return (
-        <>
-            <div className="Rivenpage">
-                <BoidsBackground />
-                <div className={"RivenBackground"}>
+    const entries = [
+        {
+            title: "Likes",
+            items: [
+                "Programming",
+                "Video games",
+                "Building things",
+                "Sprite",
+                "Cuddling",
+                "Sleeping"
+            ]
+        },
+        {
+            title: "Dislikes",
+            items: [
+                "Procedures while awake",
+                "Loud noises",
+                "Sudden changes in plan"
+            ]
+        },
+        {
+            title: "Stressors",
+            items: [
+                "Surgery with Local Anesthesia",
+                "Loud noises",
+                "Yelling",
+                "Sudden changes in plan"
+            ]
+        },
+        {
+            title: "Tells",
+            items: [
+                "Small vocal noises",
+                "Curse a little, not as much as bryn",
+                "Sprite",
+                "Bottom"
+            ]
+        },
+        {
+            title: "Guessed reason for existing",
+            items: [
+                "Working with mom"
+            ]
+        }
+    ];
 
-                    <div className={"Riven_Header"}>
-                        <div className={"Riven_Circle"}></div>
+    return (
+        <div className="Rivenpage">
+            <BoidsBackground />
+
+            <div className="RivenBackground">
+                <div className="Riven_Header">
+                    <div className="RivenHeader_title">
+                        <div className="Riven_Circle" />
                         <h1>Riven</h1>
-                        <div className={"Riven_Circle"}></div>
+                        <div className="Riven_Circle" />
                     </div>
+                    <p>They/She/It</p>
+                </div>
+
+                <div className="Riven_Grid">
+                    {entries.map((entry, i) => (
+                        <div
+                            key={entry.title}
+                            className="Riven_Grid_entry"
+                            style={{ animationDelay: `${i * 120}ms` }}
+                        >
+                            <h3>{entry.title}</h3>
+                            <ul>
+                                {entry.items.map((item) => (
+                                    <li key={item}>{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 }

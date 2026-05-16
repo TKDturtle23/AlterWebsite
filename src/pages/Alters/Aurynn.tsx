@@ -11,22 +11,22 @@ export default function AurynnPage() {
 
             <div className="AurynnBackground">
                 <div className="AurynnTitle">
-                    <div className={"AurynnTitleBar"}></div>
-                    <img src={Pearl} alt={"Pearl"}/>
-                    <h1>Aurynn</h1>
-                    <img src={Pearl} alt={"Pearl"}/>
-                    <div className={"AurynnTitleBar"}></div>
+                    <div className="AurynnTitleText">
+                        <div className={"AurynnTitleBar"}></div>
+                        <img src={Pearl} alt={"Pearl"}/>
+                        <h1>Aurynn</h1>
+                        <img src={Pearl} alt={"Pearl"}/>
+                        <div className={"AurynnTitleBar"}></div>
+                    </div>
+                    <p>It/Its</p>
                 </div>
 
                 <div className="AurynnGrids">
                     <div className={"AurynnGridEntry"}>
-                        <h1>Likes</h1>
+                        <h1>Bitch, I'm not filling this out for you</h1>
                         <p>ya</p>
                     </div>
-                    <div className={"AurynnGridEntry"}>
-                        <h1>Likes</h1>
-                        <p>ya</p>
-                    </div>
+
                 </div>
 
             </div>

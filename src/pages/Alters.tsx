@@ -2,6 +2,7 @@ import "./Alters.css"
 import { useEffect, useRef, useState } from "react";
 import {RivenPage} from "./Alters/Riven.tsx";
 import AurynnPage from "./Alters/Aurynn.tsx"
+import {Corin} from "./Alters/Corin.tsx";
 const alters = [
     {
         name: "Riven",
@@ -34,6 +35,7 @@ const alters = [
         name: "Corin",
         color: "#f8f045",
         path: "/Corin",
+        page: <Corin />
     },
 ];
 

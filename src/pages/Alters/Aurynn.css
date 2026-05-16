@@ -29,6 +29,18 @@
     background: #ff66cb;
 
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1%;
+    border-radius: 30px;
+}
+.AurynnTitle h1,p {
+    margin: 0;
+}
+.AurynnTitleText {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
